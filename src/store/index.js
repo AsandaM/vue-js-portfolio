@@ -12,7 +12,7 @@ export default createStore({
     references: null,
     aboutMe: null,
     testimonials: null,
-    // projects: null,
+    projects: null,
   },
   getters: {
   },
@@ -46,6 +46,9 @@ export default createStore({
     },
     setTestimonials(state, testimonials) {
       state.testimonials = testimonials
+    },
+    setProjects(state, projects){
+      state.projects = projects
     }
   },
   actions: {
@@ -53,7 +56,7 @@ export default createStore({
     
         let fetchedInfo = await fetch('https://asandam.github.io/json_file/data/')
         let data = await fetchedInfo.json()
-        let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials } = data
+        let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials, projects } = data
         commit('setWorkExperience', work_experience)
         commit('setEducation', education)
         commit('setCurrentLearnership', current_learnership)
@@ -64,6 +67,7 @@ export default createStore({
         commit('setReferences', references)
         commit('setAboutMe', aboutMe.text)
         commit('setTestimonials', testimonials)
+        commit('setProjects', projects)
       
     }
   },

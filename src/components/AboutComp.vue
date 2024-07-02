@@ -1,13 +1,13 @@
-<template lang="">
+<template>
     <div>
-        
+    <slot name="about"></slot>
+    <slot name="cert"></slot>
     </div>
-</template>
-<script>
+  </template>
+  
+  <script>
+
 export default {
-    
+  
 }
-</script>
-<style lang="">
-    
-</style>
+  </script>

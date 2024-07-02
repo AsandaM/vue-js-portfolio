@@ -51,7 +51,7 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
   
-          <form @submit.prevent="handleSubmit">
+          <form action="https://formcarry.com/s/SpSXqcRRU7e" method="POST" enctype="multipart/form-data">
             <h3 class="title">Contact me</h3>
             <div class="input-container" v-for="field in fields" :key="field.name">
               <input :type="field.type" :name="field.name" class="input" v-model="form[field.name]" />

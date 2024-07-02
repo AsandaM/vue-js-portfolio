@@ -58,7 +58,7 @@ export default createStore({
         let data = await fetchedInfo.json()
         let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials, projects } = data
         commit('setWorkExperience', work_experience)
-        commit('setEducation', education)
+        commit('setEducation', education.present)
         commit('setCurrentLearnership', current_learnership)
         commit('setProfessionalCertificates', professional_certificates)
         commit('setTechnicalSkills', technical_skills)

@@ -1,13 +1,16 @@
-<template lang="">
+<template>
     <div>
-        
+      <contacts-comp />
     </div>
-</template>
-<script>
-export default {
-    
-}
-</script>
-<style lang="">
-    
-</style>
+  </template>
+  
+  <script>
+  import ContactsComp from '../components/ContactComp.vue';
+  
+  export default {
+    components: {
+      ContactsComp
+    }
+  };
+  </script>
+  

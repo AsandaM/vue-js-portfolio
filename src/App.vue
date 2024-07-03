@@ -1,23 +1,39 @@
 <template>
-  <div id="app">
-    <NavBarComp />
-    <main class="main-content">
-      <transition name="flip" mode="out-in">
-        <router-view />
-      </transition>
-    </main>
-    <FooterComp />
+  <div>
+    <spinner-comp v-if="loading"></spinner-comp>
+    <div id="app" v-else>
+      <!-- content -->
+      <NavBarComp />
+      <main class="main-content">
+        <transition name="flip" mode="out-in">
+          <router-view />
+        </transition>
+      </main>
+      <FooterComp />
+    </div>
   </div>
 </template>
 
 <script>
 import NavBarComp from "./components/NavbarComp.vue";
 import FooterComp from "./components/FooterComp.vue";
+import SpinnerComp from "./components/SpinnerComp.vue";
 
 export default {
   components: {
     NavBarComp,
-    FooterComp
+    FooterComp,
+    SpinnerComp
+  },
+  data() {
+    return {
+      loading: true
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
   }
 }
 </script>
@@ -68,7 +84,7 @@ footer p {
 }
 
 .flip-enter-active, .flip-leave-active {
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 
 .flip-enter, .flip-leave-to {

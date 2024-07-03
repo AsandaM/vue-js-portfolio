@@ -65,18 +65,14 @@
                   <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.degree }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.status }}</p>
-                  <div v-for="subject in education.modules" :key="subject">
-                    <p>{{ subject }}</p>
-                  </div>
+                  <p>{{ (education.modules || []).join(', ') }}</p>
                 </div>
                 <h4 class="section-title">COMPLETED:</h4>
                 <div v-for="education in educationData().completed" :key="education.name" class="education-item">
                   <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.qualification }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.period }}</p>
-                  <div v-for="subject in education.courses" :key="subject">
-                    <p>{{ subject }}</p>
-                  </div>
+                  <p>{{ (education.courses || []).join(', ') }}</p>
                 </div>
               
               <h3 class="section-title text-center">
@@ -89,9 +85,7 @@
                 <h5 class="fw-bolder"> {{ learn.program }}, {{ learn.institution }} </h5>
                 <p class="fst-italic">{{ learn.period }}</p>
                 <p class="fw-bold">Being taught:</p>
-                <ul v-for="subject in learn.subjects" :key="subject">
-                  <li>{{ subject }}</li>
-                </ul>
+                <p>{{ (learn.subjects || []).join(', ') }}</p>
               </div>
               
               <h3 class="section-title text-center">

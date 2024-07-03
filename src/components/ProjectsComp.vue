@@ -1,7 +1,8 @@
 <template lang="">
     <div>
         <section>
-            <h2>Projects</h2>
+            <h1>PROJECTS</h1>
+            <div id="deco"></div>
             <div class="container">
                 <div class="card" v-for="project in projectsData()" :key="project.name">
                 <div class="card-inner" style="--clr:#fff;">
@@ -10,18 +11,18 @@
                         <img :src="project.image" alt="">
                     </div>
                     <div class="icon">
-                        <a href="#" class="iconBox"> <span class="material-symbols-outlined">
+                        <a :href="project.vercel" target="blank" class="iconBox"> <span class="material-symbols-outlined">
                             arrow_outward
                         </span></a>
                     </div>
                     </div>
                 </div>
                 <div class="content">
-                    <h3>Project 1</h3>
+                    <h4>{{project.name}}</h4>
                     <p>{{project.description}}</p>
                     <ul>
-                    <li style="--clr-tag:#d3b19a;" class="branding">GitHub</li>
-                    <li style="--clr-tag:#70b3b1;" class="packaging">Vercel</li>
+                    <a :href="project.github" target="blank"><li style="--clr-tag:#d3b19a;" class="branding">GitHub</li></a>
+                    <a :href="project.vercel" target="blank"><li style="--clr-tag:#70b3b1;" class="packaging">Vercel</li></a>
                     </ul>
                 </div>
                 </div>      
@@ -71,12 +72,6 @@ section {
   width: calc(min(76.5rem, 90%));
   margin-inline: auto;
   color: #111;
-}
-
-section h2 {
-  text-transform: capitalize;
-  letter-spacing: 0.025em;
-  font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
 }
 
 section a {
@@ -222,4 +217,7 @@ section .container .card .card-inner .box .icon .iconBox span {
   font-size: 1.5rem;
 }
 
+#deco{
+  border-bottom: #fff solid 1px;
+}
 </style>

@@ -2,13 +2,13 @@
   <div class="about">
     <div class="container text-center mt-5">
     <h1 class="mb-4">ABOUT ME</h1>
-    <p class="lead mb-4">
+    <!-- <p class="lead mb-4">
       I'm <strong>Asanda Mehlo</strong>, Full Stack Developer.
-    </p>
+    </p> -->
     <p class="mb-4">
       <about-comp>
         <template #about>
-          <p>{{ aboutData() }}</p>
+          <p id="me">{{ aboutData() }}</p>
         </template>
       </about-comp>
     </p>
@@ -18,21 +18,10 @@
         <div class="stats-box p-3">
           <img :src="cert.image" style="width: 20%; height: 20%">
           <h5>{{ cert.certificate }}</h5> 
-          <p>link to download</p>
+          <a :href="cert.url" target="_blank" class="btn">View Certificate</a>
         </div>
       </div>
     </div>
-    <!-- <div class="row text-left">
-      <div class="col-md-4 offset-md-4">
-        <h3 class="mb-4">TECHNICAL SKILLS</h3>
-        <ul class="list-unstyled">
-          <li v-for="(skills, category) in technicalSkills()" :key="category" class="mb-3">
-              <h5>{{ category }}</h5>
-              <p>{{ skills.join(', ') }}</p>
-            </li>
-        </ul>
-      </div>
-    </div> -->
   </div>
   </div>
 </template>
@@ -66,9 +55,12 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  
 }
 
 h1 {
@@ -85,22 +77,45 @@ h1 {
   background-color: rgba(145, 186, 159, 0.6);
   color: #fff;
   border-radius: 5px;
+  position: relative;
+  animation: appear 5s ease forwards;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #006400, #eeef9d, #afb20a, #7c7d25, #C9CC3F) 1;
 }
-.stats-box:hover {
-  border-color: linear-gradient(90deg, #006400, #eeef9d, #afb20a, #7c7d25, #C9CC3F);
-  border-style: solid;
-  border-width: 2px;
-  animation: animate-border 5s linear infinite;
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes animate-border {
-  0% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+.stats-box:hover {
+  box-shadow: 0 0 0 2px rgb(175, 212, 175), 0 0 0 4px #7c7d25, 0 0 0 6px #C9CC3F;
+  transition: box-shadow 0.3s ease;
 }
+
+.btn{
+  padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: #1abc9c;
+    line-height: 1;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
 
 .stats-box h2 {
   font-size: 2.5rem;
@@ -129,5 +144,9 @@ ul li p {
   background-color: rgba(145, 186, 159, 0.6);
   
 }
-
+#me{
+  font-size: 1.2rem;
+  /* font-style: italic; */
+  background-color: rgba(145, 186, 159, 0.6);
+}
 </style>

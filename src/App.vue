@@ -39,8 +39,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-  font-family: Arial, sans-serif;
+  
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #d6dbd8 60%, #1a3a33 40%);

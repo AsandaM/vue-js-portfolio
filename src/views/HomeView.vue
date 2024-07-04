@@ -1,9 +1,4 @@
 <template>
-  <!-- <div class="home">
-    <img alt="Vue logo" src="https://asandam.github.io/images/asaM.jpg">
-    <HelloWorld msg="Welcome to My Portfolio"/>
-  </div> -->
-
   <div class="container text-center">
     <div class="row">
     <div class="col align-self-center ring-container">
@@ -20,21 +15,19 @@
       </div>
     </div>
     <div id="back" class="col align-self-center">
-      <HelloWorld msg="Welcome to My Portfolio"/> 
+      <HomeComp msg="Welcome to My Portfolio"/> 
     </div>
   </div>
 </div>
-
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeComp from '@/components/HomeComp.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HomeComp
   }
 }
 </script>

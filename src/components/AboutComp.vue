@@ -35,4 +35,9 @@ export default {
   font-size: 1.25rem;
   font-style: italic;
 }
+b{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
 </style>

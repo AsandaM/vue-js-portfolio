@@ -49,23 +49,6 @@ export default {
 }
 </script>
 <style scoped>
- @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* background: #fff; */
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 section {
   padding-block: min(20vh, 2rem);
@@ -94,10 +77,6 @@ section .container .card:nth-child(2) .box .icon .iconBox {
   background: #70b3b1;
 }
 
-section .container .card:nth-child(3) .box .icon .iconBox {
-  background: #d05fa2;
-}
-
 section .container .card ul {
   margin: 0;
   padding: 0;
@@ -118,17 +97,8 @@ section .container .card ul li {
   border-radius: 0.188rem;
 }
 
-/* Color adjustments for li elements based on class */
-/* Note: CSS does not support the darken function directly. You'll need to manually specify the darker colors. */
-/* / */
-
 section .container .card .content {
   padding: 0.938rem 0.625rem;
-}
-
-section .container .card .content h3 {
-  text-transform: capitalize;
-  font-size: clamp(1.5rem, 1.3909rem + 0.4364vw, 1.8rem);
 }
 
 section .container .card .content p {
@@ -204,7 +174,7 @@ section .container .card .card-inner .box .icon::after {
 section .container .card .card-inner .box .icon .iconBox {
   position: absolute;
   inset: 0.625rem;
-  background: #282828;
+  background: #1a3a33;
   border-radius: 50%;
   display: flex;
   justify-content: center;

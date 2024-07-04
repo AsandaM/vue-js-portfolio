@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     work_experience: null,
-    education: null,
+    presentEducation: null,
+    completedEducation: null,
     current_learnership: null,
     professional_certificates: null,
     technical_skills: null,
@@ -20,8 +21,11 @@ export default createStore({
     setWorkExperience(state, work_experience) {
       state.work_experience = work_experience
     },
-    setEducation(state, education) {
-      state.education = education
+    setPast(state, education) {
+      state.completedEducation = education
+    },
+    setPresent(state, education) {
+      state.presentEducation = education
     },
     setCurrentLearnership(state, current_learnership) {
       state.current_learnership = current_learnership
@@ -58,13 +62,14 @@ export default createStore({
         let data = await fetchedInfo.json()
         let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials, projects } = data
         commit('setWorkExperience', work_experience)
-        commit('setEducation', education)
+        commit('setPast', education.completed)
+        commit('setPresent', education.present)
         commit('setCurrentLearnership', current_learnership)
         commit('setProfessionalCertificates', professional_certificates)
         commit('setTechnicalSkills', technical_skills)
         commit('setAdditionalExperience', additional_experience)
         commit('setSkills', skills)
-        commit('setReferences', references)
+        commit('setReferences', references.stats_sa)
         commit('setAboutMe', aboutMe.text)
         commit('setTestimonials', testimonials)
         commit('setProjects', projects)

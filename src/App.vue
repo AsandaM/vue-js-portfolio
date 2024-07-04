@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <spinner-comp v-if="loading"></spinner-comp>
-    <div id="app" v-else>
-      <!-- content -->
+  <div id="app">
       <NavBarComp />
-      <main class="main-content">
+      <spinner-comp v-if="loading"></spinner-comp>
+      <template v-else>
+        <main class="main-content">
         <transition name="flip" mode="out-in">
           <router-view />
         </transition>
       </main>
       <FooterComp />
-    </div>
+    </template>
   </div>
 </template>
 
@@ -45,7 +44,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #d6dbd8 60%, #1a3a33 40%);
+  background: linear-gradient(to right, #d6dbd8 63%, #1a3a33 40%);
   height: 100vh;
   display: flex;
   flex-direction: column;

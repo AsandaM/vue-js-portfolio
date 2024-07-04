@@ -1,24 +1,22 @@
 <template>
-  <div class="container text-center">
-    <div class="row">
-    <div class="col align-self-center ring-container">
-      <div class="align-self-center email-container">
-          <p class="email-text fst-italic">_______ asandamehlo088@gmail.com _______</p>
+  <main>
+      <div class="content container">
+        <HomeComp msg="Welcome to My Portfolio"/>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/4439445/pexels-photo-4439445.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="" />
         </div>
-      <div class="ring">
-        <i style="--clr:#00ff0a;"></i>
-        <i style="--clr:#ff0057;"></i>
-        <i style="--clr:#fffd44;"></i>
-        <div class="image">
-          <img src="https://asandam.github.io/images/asaM.jpg" alt="Your Name" class="img-fluid rounded-circle" style="max-width: 350px;"> 
+        <div class="card">
+          <img
+            src="https://asandam.github.io/images/asaM.jpg"
+            alt="" />
         </div>
       </div>
-    </div>
-    <div id="back" class="col align-self-center">
-      <HomeComp msg="Welcome to My Portfolio"/> 
-    </div>
-  </div>
-</div>
+    </main>
 </template>
 
 <script>
@@ -34,90 +32,158 @@ export default {
 
 <style scoped>
 
-.ring-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  min-height: 100vh;
 }
 
-.ring {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ring i {
-  position: absolute;
-  inset: 0;
-  border: 1px solid #C9CC3F;
-  transition: 0.5s;
-}
-
-.ring i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-
-.ring i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-
-.ring i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-
-.ring:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-#back{
-  background-color: rgba(145, 186, 159, 0.6);
-}
-
-.email-container {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
-  writing-mode: vertical-lr;
-  font-size: 18px; /* Adjust as needed */
-  padding: 10px;
-  z-index: 1000; /* Ensure it stays on top of other elements */
+.content {
+  padding-left: 120px;
+  color: #c7c7c7c9;
   
 }
 
-.email-text {
-  white-space: nowrap; /* Keeps the email in one line */
-  color: #1a3a33;
+.content p {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  line-height: 1.6;
+  padding-right: 100px;
 }
 
-.container {
-  padding-left: 100px; /* Adjust this value to create space for the email navbar */
+.stack {
+  position: relative;
 }
+
+.stack:hover .card{
+  transform: translate(-50%,-50%) scale(1.2);
+}
+
+.card {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25),
+    0 15px 20px 0 rgba(0, 0, 0, 0.125);
+  transition: transform 0.6s;
+  user-select: none;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.card:nth-last-child(n + 5) {
+  --x: calc(-50% + 90px);
+  transform: translate(var(--x), -50%) scale(0.85);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.01);
+}
+
+.card:nth-last-child(4) {
+  --x: calc(-50% + 60px);
+  transform: translate(var(--x), -50%) scale(0.9);
+}
+
+.card:nth-last-child(3) {
+  --x: calc(-50% + 30px);
+  transform: translate(var(--x), -50%) scale(0.95);
+}
+
+.card:nth-last-child(2) {
+  --x: calc(-50%);
+  transform: translate(var(--x), -50%) scale(1);
+}
+
+.card:nth-last-child(1) {
+  --x: calc(-50% - 30px);
+  transform: translate(var(--x), -50%) scale(1.05);
+}
+
+.card:nth-last-child(1) img {
+  box-shadow: 0 1px 5px 5px rgba(255, 193, 111, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .content {
+    padding-left: 80px;
+  }
+
+  .content p {
+    padding-right: 40px;
+  }
+
+  .card {
+    width: 250px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .content {
+    padding-left: 60px;
+  }
+
+  .content p {
+    line-height: 1.5;
+  }
+
+  .card {
+    width: 220px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 990px) {
+  .content p {
+    padding-right: 0;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 950px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 3fr;
+    grid-template-areas:
+      "stacked"
+      "content";
+  }
+
+.content {
+  grid-area: content;
+  text-align: center;
+  padding: 0 90px;
+
+}
+
+.stack {
+  grid-area: stacked;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    grid-template-rows: 1fr 1fr;
+  }
+
+.card {
+    width: 180px;
+    height: 260px;
+  }
+}
+
 
 </style>

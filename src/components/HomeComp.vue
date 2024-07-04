@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap");
 .about{
   color:black;
 }
@@ -25,14 +26,23 @@ export default {
 }
 
 .about h1{
-  font-weight: bold;
-  font-size: 4rem;
-  color: #ffffff;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(6.5rem, 8vw, 10rem);
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #799786, #2a664f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 36px;
+  padding-left: 10px;
 }
 
 .about p{
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+  line-height: 1.8;
+  padding-right: 100px;
 }
 .btn-primary {
   background-color: #1a3a33;
@@ -44,4 +54,35 @@ export default {
     background-color: transparent;
     color: #fff;
   }
+
+@media (max-width: 1200px) {
+
+  .content p {
+    padding-right: 40px;
+    
+  }
+
+}
+
+@media (max-width: 1050px) {
+
+  .content p {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 990px) {
+  .content p {
+    padding-right: 0;
+    background-color: #fff;
+  }
+
+  .content h1{
+    color: #fff;
+  }
+
+}
+
+
+
 </style>

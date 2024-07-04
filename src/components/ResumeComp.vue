@@ -172,7 +172,7 @@
   
 <style scoped>
 .resume-container {
-  background-color: rgba(145, 186, 159, 0.6);
+  background-color: rgba(108, 149, 122, 0.6);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -220,7 +220,7 @@ svg {
 }
 
 .col-md-5{
-  background-color: rgba(145, 186, 159, 0.6);
+  background-color: rgba(234, 241, 236, 0.6);
 }
 
 .btn {

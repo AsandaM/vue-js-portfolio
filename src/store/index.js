@@ -58,23 +58,27 @@ export default createStore({
   actions: {
     async getData({ commit }) {
     
-        let fetchedInfo = await fetch('https://asandam.github.io/json_file/data/')
-        let data = await fetchedInfo.json()
-        let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials, projects } = data
-        commit('setWorkExperience', work_experience)
-        commit('setPast', education.completed)
-        commit('setPresent', education.present)
-        commit('setCurrentLearnership', current_learnership)
-        commit('setProfessionalCertificates', professional_certificates)
-        commit('setTechnicalSkills', technical_skills)
-        commit('setAdditionalExperience', additional_experience)
-        commit('setSkills', skills)
-        commit('setReferences', references.stats_sa)
-        commit('setAboutMe', aboutMe.text)
-        commit('setTestimonials', testimonials)
-        commit('setProjects', projects)
+      try {
+        let fetchedInfo = await fetch('https://asandam.github.io/json_file/data/');
+        let data = await fetchedInfo.json();
+        let { work_experience, education, current_learnership, professional_certificates, technical_skills, additional_experience, skills, references, aboutMe, testimonials, projects } = data;
+        commit('setWorkExperience', work_experience);
+        commit('setPast', education.completed);
+        commit('setPresent', education.present);
+        commit('setCurrentLearnership', current_learnership);
+        commit('setProfessionalCertificates', professional_certificates);
+        commit('setTechnicalSkills', technical_skills);
+        commit('setAdditionalExperience', additional_experience);
+        commit('setSkills', skills);
+        commit('setReferences', references.stats_sa);
+        commit('setAboutMe', aboutMe.text);
+        commit('setTestimonials', testimonials);
+        commit('setProjects', projects);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
       
-    }
+}
   },
   modules: {
   }

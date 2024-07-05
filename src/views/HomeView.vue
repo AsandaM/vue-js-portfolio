@@ -3,11 +3,10 @@
       <div class="content container">
         <HomeComp msg="Welcome to My Portfolio"/>
       </div>
-
       <div class="stack">
         <div class="card">
           <img
-            src="https://images.pexels.com/photos/4439445/pexels-photo-4439445.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src="https://asandam.github.io/images/asaM.jpg"
             alt="" />
         </div>
         <div class="card">
@@ -73,6 +72,7 @@ main {
   transition: transform 0.6s;
   user-select: none;
 }
+
 
 .card img {
   display: block;
@@ -180,9 +180,13 @@ main {
   }
 
 .card {
-    width: 180px;
-    height: 260px;
+    width: 120px;
+    height: 250px;
   }
+
+.content{
+  padding: 0 50px;
+}
 }
 
 

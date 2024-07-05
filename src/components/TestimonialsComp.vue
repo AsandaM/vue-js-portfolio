@@ -134,6 +134,8 @@
   padding: 2rem 1rem;
   color: #fff;
   opacity: 1;
+  font-size: 14px;
+  padding: 0;
 }
     
     
@@ -166,5 +168,44 @@
 h1{
   margin-left: 50px;
 }
+
+@media (max-width: 1050px) {
+  .carousel__item {
+  height: 25rem; 
+  width: 25rem; 
+  
+}
+.carousel__text{
+  font-size: 10px;
+}
+}
+@media (max-width: 900px) {
+  .carousel__item {
+  height: 20rem; 
+  width: 20rem; 
+  
+}
+.carousel__text{
+  font-size: 10px;
+}
+}
+
+@media (max-width: 350px){
+  .carousel__item{
+    height: 9rem; 
+    width: 9rem; 
+  }
+
+.carousel__text{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 6px;
+}
+
+h1{
+  color: #fff;
+}
+}
+
 </style>
     

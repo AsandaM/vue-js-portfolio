@@ -1,6 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container-fluid">
+        <p id="shimmerWave">MEHLO A.</p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,6 +62,7 @@
   </script>
   
   <style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Honk&family=Marck+Script&family=Mr+Dafoe&display=swap');
   .navbar {
     background-color: #d6dbd8;
     padding: 1rem 2rem;
@@ -158,5 +160,48 @@
   }
 }
 
-  </style>
+#shimmerWave {
+  display: inline-block;
+  animation: wave 2.4s ease infinite;
+  letter-spacing: 0.01em;
+  transform-origin: 100% 50%;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+  font-size: 34px;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate3D(0, 0, 0) scale(1) rotateY(0);
+    color: #000;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  12% {
+    transform: translate3D(2px, -2px, 2px) scale(1.16) rotateY(6deg);
+    color: lighten(#000, 54%);
+  }
+  15% {
+    text-shadow: 0 0 2px lighten(#000, 30%);
+  }
+  24% {
+    transform: translate3D(0, 0, 0) scale(1) rotateY(0);
+    color: lighten(#000, 10%);
+    opacity: 1;
+  }
+  36% {
+    transform: translate3D(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+</style>
   

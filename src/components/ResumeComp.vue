@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
     <div class="container resume-container mt-5">
       <div class="row">
         <div class="col-md-5">
@@ -77,7 +77,6 @@
                 </h3>
                 <h4 class="section-title">PRESENT:</h4>
                 <div v-for="education in presentEducation()" :key="education.name" class="education-item">
-                  <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.degree }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.status }}</p>
                   <p class="fw-bolder">Modules included:</p>
@@ -88,7 +87,6 @@
                 </div>
                 <h4 class="section-title">COMPLETED:</h4>
                 <div v-for="education in completedEducation()" :key="education.name" class="education-item">
-                  <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.qualification }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.period }}</p>
                   <p>{{ (education.courses || []).join(', ') }}</p>
@@ -100,7 +98,6 @@
                 </svg> CURRENT LEARNERSHIP
               </h3>
               <div class="list-unstyled" v-for="learn in learnership()" :key="learn.name"> 
-                <!-- <h5>{{ category }}</h5> -->
                 <h5 class="fw-bolder"> {{ learn.program }}, {{ learn.institution }} </h5>
                 <p class="fst-italic">{{ learn.period }}</p>
                 <p class="fw-bolder">Being taught:</p>
@@ -123,13 +120,12 @@
               
               
             </div>
-        
-      </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  export default {
+<script>
+export default {
     methods: {
       presentEducation(){
         return this.$store.state.presentEducation
@@ -169,7 +165,7 @@
     }
     
   }
-  </script>
+</script>
   
 <style scoped>
 .resume-container {
@@ -259,5 +255,5 @@ label{
 #download:hover svg {
   color: #f8f8f8;
 }
-  </style>
+</style>
   

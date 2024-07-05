@@ -143,9 +143,9 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjust the position as needed */
+  bottom: -2px; /* Adjust the position */
   width: 100%;
-  height: 2px; /* Adjust the thickness as needed */
+  height: 2px; /* Adjust the thickness */
   background: linear-gradient(90deg, #006400, #eeef9d, #afb20a, #7c7d25, #C9CC3F);
   background-size: 500% 100%;
   animation: animate-underline 5s linear infinite;

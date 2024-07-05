@@ -4,11 +4,7 @@
       <div class="carousel-container">
         <div class="carousel">
           <div 
-            v-for="(item, index) in carouselItems" 
-            :key="index" 
-            :class="getClass(index)"
-            class="carousel__item"
-          >
+            v-for="(item, index) in carouselItems" :key="index" :class="getClass(index)" class="carousel__item">
             <img :src="item.image" :alt="item.alt">
             <div class="carousel__text" v-if="index === currentIndex">
               <p>"{{ item.text }}"</p>
@@ -19,30 +15,30 @@
             <button class="carousel__btn" @click="prevItem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="m15 4l2 2l-6 6l6 6l-2 2l-8-8z"/></svg></button>
             <button class="carousel__btn" @click="nextItem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg></button>
           </div>
-        </div>
       </div>
-    </template>
+    </div>
+</template>
     
-    <script>
-    export default {
-      props: {
-        items: {
-          type: Array,
-          required: true
-        }
-      },
-      data() {
-        return {
-          currentIndex: 0,
-        };
-      },
-      computed: {
-        carouselItems() {
-          return this.items;
-        }
-      },
-      methods: {
-        getClass(index) {
+<script>
+export default {
+  props: {
+      items: {
+        type: Array,
+        required: true
+      }
+    },
+  data() {
+      return {
+        currentIndex: 0,
+      };
+    },
+  computed: {
+      carouselItems() {
+        return this.items;
+      }
+    },
+  methods: {
+      getClass(index) {
           if (index === this.currentIndex) {
             return 'carousel__item--main';
           } else if (index === (this.currentIndex + 1) % this.carouselItems.length) {
@@ -60,7 +56,7 @@
           this.currentIndex = (this.currentIndex - 1 + this.carouselItems.length) % this.carouselItems.length;
         }
       }
-    };
+};
 </script>
     
 <style>

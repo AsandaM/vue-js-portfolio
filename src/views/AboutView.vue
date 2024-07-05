@@ -2,9 +2,6 @@
   <div class="about">
     <div class="container text-center mt-5">
     <h1 class="mb-4">ABOUT ME</h1>
-    <!-- <p class="lead mb-4">
-      I'm <strong>Asanda Mehlo</strong>, Full Stack Developer.
-    </p> -->
     <p class="mb-4">
       <about-comp>
         <template #about>
@@ -138,7 +135,6 @@ ul li p {
 }
 #me{
   font-size: 1.2rem;
-  /* font-style: italic; */
   background-color: rgba(145, 186, 159, 0.6);
 }
 </style>

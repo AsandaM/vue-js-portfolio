@@ -24,6 +24,9 @@ export default {
 .about a{
   margin: 10px;
 }
+.about{
+  animation: appear 3s ease forwards;
+}
 
 .about h1{
   font-family: "Dancing Script", cursive;
@@ -36,6 +39,18 @@ export default {
   line-height: 1.1;
   margin-bottom: 36px;
   padding-left: 10px;
+  
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about p{
@@ -75,14 +90,25 @@ export default {
   .content p {
     padding-right: 0;
     background-color: #fff;
+    
   }
 
   .content h1{
-    color: #fff;
-  }
-
+  background: -webkit-linear-gradient(0deg, #1a3a33, #f2f3f3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-size: clamp(4.5rem, 6vw, 8rem);
+  padding-left: 0;
+  margin-left: 0;
 }
 
+@media (max-width: 650px){
+  .content{
+    padding-left: 0 ;
+  }
+}
 
-
+}
 </style>

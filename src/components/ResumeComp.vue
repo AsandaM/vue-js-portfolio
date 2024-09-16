@@ -6,18 +6,19 @@
     </div>
     <div class="col text-end">
       <div class="btn-group">
-        <button type="button" class="btn">Download CV</button>
-        <button id="download" type="button" class="btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-          </svg>
-        </button>
-
+            <label type="text">Download CV</label>
+            <a href="https://asandam.github.io/images/myCV.pdf" target="_blank">
+            <button id="download" type="button" class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg>
+            </button>
+          </a>
       </div>
     </div>
   </div>
-</div>
+  </div>
     <div class="container resume-container mt-5">
       <div class="row">
         <div class="col-md-5">
@@ -76,7 +77,6 @@
                 </h3>
                 <h4 class="section-title">PRESENT:</h4>
                 <div v-for="education in presentEducation()" :key="education.name" class="education-item">
-                  <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.degree }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.status }}</p>
                   <p class="fw-bolder">Modules included:</p>
@@ -87,7 +87,6 @@
                 </div>
                 <h4 class="section-title">COMPLETED:</h4>
                 <div v-for="education in completedEducation()" :key="education.name" class="education-item">
-                  <!-- <h4>{{ category}} : </h4> -->
                   <h5 class="fw-bolder">{{ education.qualification }}, {{ education.institution }}</h5>
                   <p class="fst-italic">{{ education.period }}</p>
                   <p>{{ (education.courses || []).join(', ') }}</p>
@@ -99,7 +98,6 @@
                 </svg> CURRENT LEARNERSHIP
               </h3>
               <div class="list-unstyled" v-for="learn in learnership()" :key="learn.name"> 
-                <!-- <h5>{{ category }}</h5> -->
                 <h5 class="fw-bolder"> {{ learn.program }}, {{ learn.institution }} </h5>
                 <p class="fst-italic">{{ learn.period }}</p>
                 <p class="fw-bolder">Being taught:</p>
@@ -122,13 +120,12 @@
               
               
             </div>
-        
-      </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  export default {
+<script>
+export default {
     methods: {
       presentEducation(){
         return this.$store.state.presentEducation
@@ -168,7 +165,7 @@
     }
     
   }
-  </script>
+</script>
   
 <style scoped>
 .resume-container {
@@ -236,11 +233,27 @@ svg {
   transition: 0.3s;
   margin-top: 10px;
 }
+
+label{
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #0e5c31;
+  font-size: 0.95rem;
+  color: #1abc9c;
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  margin: 0;
+}
   
 #download:hover {
   background-color: transparent;
   color: #fff;
-}
   
-  </style>
+}
+#download:hover svg {
+  color: #f8f8f8;
+}
+</style>
   

@@ -27,8 +27,8 @@ export default {
 
 .about h1{
   font-family: "Dancing Script", cursive;
-  font-size: clamp(6.5rem, 8vw, 10rem);
-  font-weight: 700;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 500;
   background: -webkit-linear-gradient(0deg, #799786, #2a664f);
   background-clip: text;
   -webkit-background-clip: text;

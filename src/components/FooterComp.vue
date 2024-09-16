@@ -1,6 +1,6 @@
 <template>
     <!-- Footer -->
-    <footer class="text-center py-4">
+    <footer class="text-center py-2">
         <p id="footer"> &copy; {{ year }} Copyright: Asanda Mehlo </p>
         <div class="svg-container">
             <a href="https://www.linkedin.com/in/asanda-mehlo" target="_blank">

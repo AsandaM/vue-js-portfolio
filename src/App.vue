@@ -62,7 +62,7 @@ nav {
 
 .main-content {
   flex: 1;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: left;
 }
 
@@ -70,7 +70,7 @@ footer {
   background-color: #1a3a33;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 footer p {

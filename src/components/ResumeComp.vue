@@ -234,7 +234,7 @@ svg {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  margin: 0;
+  margin-top: 10px;
 }
   
 #download:hover {

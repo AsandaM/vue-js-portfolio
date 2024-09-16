@@ -34,13 +34,6 @@
                 </span>
               </router-link>
             </li>
-            <li class="nav-item" :class="{ active: $route.path === '/testimonials' }">
-              <router-link to="/testimonials" class="nav-link">
-                <span class="outer">
-                  <span class="inner">TESTIMONIALS</span>
-                </span>
-              </router-link>
-            </li>
             <li class="nav-item" :class="{ active: $route.path === '/contact' }">
               <router-link to="/contact" class="nav-link">
                 <span class="outer">

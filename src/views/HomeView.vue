@@ -37,7 +37,8 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   place-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
+  margin: 0;
 }
 
 .content {
@@ -66,7 +67,7 @@ main {
   top: 50%;
   left: 50%;
   width: 350px;
-  height: 500px;
+  height: 400px;
   border-radius: 2rem;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25),
     0 15px 20px 0 rgba(0, 0, 0, 0.125);

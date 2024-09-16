@@ -73,6 +73,10 @@
           </form>
         </div>
       </div>
+      <div class="col">
+
+        <p>hwll</p>
+      </div>
 
     </div>
     </div>
@@ -129,8 +133,8 @@
   .container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 2rem;
+    /* min-height: 100vh; */
+    padding: 1rem;
     overflow: hidden;
     display: flex;
     align-items: center;

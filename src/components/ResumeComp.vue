@@ -231,6 +231,10 @@ svg {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  
+}
+
+.btn-group{
   margin-top: 10px;
 }
 

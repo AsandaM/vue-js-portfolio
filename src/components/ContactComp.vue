@@ -73,11 +73,6 @@
           </form>
         </div>
       </div>
-      <div class="col">
-
-        <p>hwll</p>
-      </div>
-
     </div>
     </div>
   </template>
@@ -132,8 +127,8 @@ textarea {
   
   .container {
     position: relative;
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100%; */
+    /* min-height: 100vh; */
     padding: 2rem;
     overflow: hidden;
     display: flex;

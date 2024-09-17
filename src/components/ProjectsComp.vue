@@ -10,19 +10,14 @@
                     <div class="imgBox">
                         <img :src="project.image" alt="">
                     </div>
-                    <div class="icon">
-                        <a :href="project.vercel" target="blank" class="iconBox"> <span class="material-symbols-outlined">
-                            arrow_outward
-                        </span></a>
-                    </div>
                     </div>
                 </div>
                 <div class="content">
                     <h4>{{project.name}}</h4>
                     <p>{{project.description}}</p>
                     <ul>
-                    <a :href="project.github" target="blank"><li style="--clr-tag:#d3b19a;" class="branding">GitHub</li></a>
-                    <a :href="project.vercel" target="blank"><li style="--clr-tag:#70b3b1;" class="packaging">Vercel</li></a>
+                    <a :href="project.github" target="blank"><li style="--clr-tag:#d3b19a;" class="github">GitHub</li></a>
+                    <a :href="project.vercel" target="blank"><li style="--clr-tag:#70b3b1;" class="vercel">Vercel</li></a>
                     </ul>
                 </div>
                 </div>      
@@ -69,14 +64,6 @@ section .container {
   gap: 2rem;
 }
 
-section .container .card:nth-child(1) .box .icon .iconBox {
-  background: #d3b19a;
-}
-
-section .container .card:nth-child(2) .box .icon .iconBox {
-  background: #70b3b1;
-}
-
 section .container .card ul {
   margin: 0;
   padding: 0;
@@ -85,6 +72,7 @@ section .container .card ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.625rem;
+  margin-top: auto;
 }
 
 section .container .card ul li {
@@ -98,7 +86,11 @@ section .container .card ul li {
 }
 
 section .container .card .content {
+  flex-grow: 1;
   padding: 0.938rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section .container .card .content p {
@@ -111,8 +103,7 @@ section .container .card .card-inner {
   width: inherit;
   height: 18.75rem;
   background: var(--clr);
-  border-radius: 1.25rem;
-  border-bottom-right-radius: 0;
+  /* border-bottom-right-radius: 0; */
   overflow: hidden;
 }
 
@@ -120,7 +111,7 @@ section .container .card .card-inner .box {
   width: 100%;
   height: 100%;
   background: #fff;
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
   overflow: hidden;
 }
 
@@ -133,58 +124,6 @@ section .container .card .card-inner .box .imgBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-section .container .card .card-inner .box .icon {
-  position: absolute;
-  bottom: -0.375rem;
-  right: -0.375rem;
-  width: 6rem;
-  height: 6rem;
-  background: var(--clr);
-  border-top-left-radius: 50%;
-}
-
-section .container .card .card-inner .box .icon:hover .iconBox {
-  transform: scale(1.1);
-}
-
-section .container .card .card-inner .box .icon::before,
-section .container .card .card-inner .box .icon::after {
-  position: absolute;
-  content: "";
-  background: transparent;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-bottom-right-radius: 1.25rem;
-}
-
-section .container .card .card-inner .box .icon::before {
-  bottom: 0.375rem;
-  left: -1.25rem;
-  box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
-}
-
-section .container .card .card-inner .box .icon::after {
-  top: -1.25rem;
-  right: 0.375rem;
-  box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
-}
-
-section .container .card .card-inner .box .icon .iconBox {
-  position: absolute;
-  inset: 0.625rem;
-  background: #1a3a33;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-}
-
-section .container .card .card-inner .box .icon .iconBox span {
-  color: #fff;
-  font-size: 1.5rem;
 }
 
 #deco{

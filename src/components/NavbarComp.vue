@@ -24,7 +24,7 @@
             <li class="nav-item" :class="{ active: $route.path === '/resume' }">
               <router-link to="/resume" class="nav-link">
                 <span class="outer">
-                  <span class="inner">RESUME</span>
+                  <span class="inner">EDUCATION & EXPERIENCE </span>
                 </span>
               </router-link>
             </li>

@@ -17,7 +17,7 @@
                     <p>{{project.description}}</p>
                     <ul>
                     <a :href="project.github" target="blank"><li style="--clr-tag:#d3b19a;" class="github">GitHub</li></a>
-                    <a :href="project.vercel" target="blank"><li style="--clr-tag:#70b3b1;" class="vercel">Vercel</li></a>
+                    <a :href="project.vercel" target="blank"><li style="--clr-tag:#70b3b1;" class="demo">Live Demo</li></a>
                     </ul>
                 </div>
                 </div>      

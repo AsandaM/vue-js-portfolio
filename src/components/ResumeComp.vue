@@ -52,8 +52,12 @@
             </h3>
             <ul>
               <li v-for="(skills, category) in technicalSkills()" :key="category">
-                {{ skills.join(', ') }}
+                <h5 class="text-capitalize">{{ category.split('_').join(' ') }}:</h5>
+                <ul>
+                  <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+                </ul>
               </li>
+              <!-- {{ skills.join(', ') }} {{ category }} -->
             </ul>
         </div>
         <div class="col-md-2 d-flex justify-content-center">

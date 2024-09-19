@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      titles: ["Full Stack Developer", "Cloud Architect", "Networking Specialist", "Software Engineer"],
+      titles: ["Full Stack Developer", "Cloud Architect", "Software Developer", "Software Engineer"],
       currentTitle: "Full Stack Developer",
       titleIndex: 0
     };

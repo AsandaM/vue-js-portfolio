@@ -85,6 +85,11 @@ section .container .card ul li {
   border-radius: 0.188rem;
 }
 
+section .container .card ul li:hover{
+  background-color: #1a3a33;
+  color: white ;
+}
+
 section .container .card .content {
   flex-grow: 1;
   padding: 0.938rem 0.625rem;
@@ -103,7 +108,6 @@ section .container .card .card-inner {
   width: inherit;
   height: 18.75rem;
   background: var(--clr);
-  /* border-bottom-right-radius: 0; */
   overflow: hidden;
 }
 
@@ -111,13 +115,17 @@ section .container .card .card-inner .box {
   width: 100%;
   height: 100%;
   background: #fff;
-  /* border-radius: 1.25rem; */
   overflow: hidden;
 }
 
 section .container .card .card-inner .box .imgBox {
   position: absolute;
   inset: 0;
+}
+
+section .container .card:hover{
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #006400, #eeef9d, #afb20a, #7c7d25, #C9CC3F) 1;
 }
 
 section .container .card .card-inner .box .imgBox img {

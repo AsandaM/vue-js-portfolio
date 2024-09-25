@@ -2,7 +2,7 @@
   <div class="container">
   <div class="row ">
     <div id="deco" class="col text-start">
-      <h1>RESUME</h1>
+      <h1>EDUCATION & EXPERIENCE</h1>
     </div>
     <div class="col text-end">
       <div class="btn-group">

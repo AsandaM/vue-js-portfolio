@@ -39,8 +39,18 @@ export default {
     cursor: pointer;
 }
 
+a{
+    color: #737517;
+    transition: transform 0.5s ease-in-out;
+}
+
+a:hover{
+    color: #aaac28;
+    transform: scale(1.2);
+}
+
 p{
-    color: white;
+    color: #afb134;
 }
     
 </style>

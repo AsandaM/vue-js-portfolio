@@ -62,7 +62,6 @@ nav {
 
 .main-content {
   flex: 1;
-  /* padding: 1rem; */
   text-align: left;
 }
 

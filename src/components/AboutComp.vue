@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="lead mb-4">
+    <p class="lead mb-4 text-black">
       I'm <b>Asanda Mehlo</b>, <span>{{ currentTitle }}</span>.
     </p>
     <slot name="about">
